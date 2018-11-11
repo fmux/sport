@@ -65,7 +65,6 @@ function main {
         beep
         sleep 1
     done
-    sleep 1
 
     local i
     for (( i=0; i < $count; i++)); do
@@ -73,7 +72,7 @@ function main {
         local j
         for (( j=1; j <= $REPEATS; j++ )); do
             echo -n "${j}/${REPEATS} "
-            beep
+            beep 2
             progress $N
             beep 2
             echo -n " break "
